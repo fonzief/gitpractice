@@ -9,10 +9,3 @@ d = {}
 for key, value in zip(list1 ,list2):
     d[key] = value
 print(d)
-
-try:
-    print(x)
-except:
-    print("Syntaxerror:lid syntax")
-finally:
-    print("bye")
