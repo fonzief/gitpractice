@@ -35,7 +35,35 @@ def getindex(target, nums):
 
 #getindex(target, nums)
 
+##############################################################
+##loop the loop
+def getindex(target, nums):
+    indexlist = []
+    for n in range(len(nums)):
+        for i in range(len(nums)):
+            if nums[n] + nums[i] == target:
+                indexlist.append([n,i])
+
+##single out which indexes
+    indexsum = []
+    output =[]
+    for n in indexlist:
+        if int(n[0]) + int(n[1]) not in indexsum:
+            indexsum.append(int(n[0]) + int(n[1]))
+            output.append(n)
+
+##make_list_of_lists_[[0,1]]_into_one_chain
+    import itertools
+    print tuple(list(itertools.chain.from_iterable(output)))
+
+
+getindex(target, nums)
+
+
+
 #####################################################################
+###kopierat fran sida!!!!###
+
 def twoSum(nums, target):
         seen = {}
         for i, v in enumerate(nums):
