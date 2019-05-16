@@ -45,6 +45,7 @@ class Client:
     else:
         self.location = "private collection"
 
+
   def sell_artwork(self, artwork, price):
     self.price = price
     self.artwork = artwork
